@@ -1,31 +1,32 @@
-PROPRIETARY FREEWARE LICENSE & TERMS OF USE
+MIT License
 
-Copyright (c) 2026 Low Effort Development Studios / James Humphrey.
-All rights reserved.
+Copyright (c) 2026 Low Effort Design Studios
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated binary files (the "Software"), to run and use
-the Software for personal, educational, and commercial purposes, subject to
-the following conditions:
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-1. PROPRIETARY & CLOSED SOURCE: The Software is proprietary software. The source
-   code is private and not open source. No source code license or transfer of
-   intellectual property rights is granted or implied.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-2. RESTRICTIONS:
-   - You may not reverse engineer, decompile, disassemble, modify, or attempt
-     to derive the source code of the Software.
-   - You may not redistribute, repackage, sell, rent, lease, or sub-license the
-     Software for commercial gain without explicit written authorization from
-     the copyright holder.
-   - You may not remove or alter any copyright, branding, or proprietary notices
-     contained within the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-3. DISCLAIMER OF WARRANTY:
-   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-   FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
-   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM,
-   OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-   THE SOFTWARE.
+---
+
+### Additional Terms & Telemetry Disclosure
+
+#### 1. Runtime Usage & Download Telemetry
+The Software includes native, privacy-preserving runtime usage and distribution download telemetry:
+- **Download & Update Tracking**: The Software logs release verification queries and asset download events (version tags, download completion status, byte sizes, and duration) to measure distribution reach and update health.
+- **Runtime Execution Statistics**: The Software monitors non-identifiable usage statistics including application launch counts, active session duration, total runtime uptime, macOS operating system version, and system architecture (Apple Silicon arm64 vs Intel x86_64).
+- **No Personally Identifiable Information (PII)**: The Software does NOT harvest, transmit, or retain personal identities, names, email addresses, IP addresses, persistent hardware serial numbers, file paths, open document contents, or network packet payloads.
+- **User Transparency & Opt-Out**: Users may inspect collected telemetry events in raw JSON format, clear telemetry history, or permanently disable all runtime usage and download telemetry at any time via `Settings -> General -> Runtime Usage & Download Telemetry`.

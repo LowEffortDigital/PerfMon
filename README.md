@@ -2,13 +2,16 @@
 
 Official binary releases and installer packages for **PerfMon (Task Manager for macOS)**, created by [Low Effort Development Studios](https://loweffort.digital).
 
+> 📖 **Feature Guide**: Looking for a detailed walkthrough with screenshots? Check out the [**Complete Feature Guide**](FEATURE_GUIDE.md).
+
 ---
 
 ## ⬇️ Downloads
 
 | Release | Version | macOS Requirement | Architecture | Package |
 |:---|:---|:---|:---|:---|
-| **Latest** | **v1.0.0** | macOS 14.0+ (Sonoma, Sequoia) | Universal (Apple Silicon & Intel) | [**Download PerfMon.dmg**](https://github.com/LowEffortDigital/PerfMon/releases/latest/download/PerfMon.dmg) |
+| **Latest** | **v1.1** | macOS 14.0+ (Sonoma, Sequoia) | Universal (Apple Silicon & Intel) | [**Download PerfMon.dmg**](https://github.com/LowEffortDigital/PerfMon/releases/latest/download/PerfMon.dmg) |
+| **Previous** | **v1.0.0** | macOS 14.0+ | Universal | [Download PerfMon v1.0.0](https://github.com/LowEffortDigital/PerfMon/releases/tag/v1.0.0) |
 
 ---
 
@@ -16,40 +19,34 @@ Official binary releases and installer packages for **PerfMon (Task Manager for 
 
 1. Download [**`PerfMon.dmg`**](https://github.com/LowEffortDigital/PerfMon/releases/latest/download/PerfMon.dmg).
 2. Double-click the `.dmg` file to mount it.
-3. Drag **Task Manager** to your **Applications** folder.
-4. Launch **Task Manager** from Launchpad, Spotlight, or Applications.
+3. Drag **PerfMon** (or **Task Manager**) to your **Applications** folder.
+4. Launch **PerfMon** from Launchpad, Spotlight, or Applications.
 
 > **Note on Gatekeeper**: If macOS prompts that the application cannot be checked on first launch:
-> - Right-click **Task Manager.app** in Applications ➔ Click **Open** ➔ Click **Open Anyway** (or go to *System Settings ➔ Privacy & Security ➔ Open Anyway*).
-> - Alternatively, run this single command in Terminal:
+> - Right-click **PerfMon.app** in Applications ➔ Click **Open** ➔ Click **Open Anyway** (or go to *System Settings ➔ Privacy & Security ➔ Open Anyway*).
+> - Alternatively, run this command in Terminal:
 >   ```bash
->   xattr -cr "/Applications/Task Manager.app"
+>   xattr -cr "/Applications/PerfMon.app"
 >   ```
 
 ---
 
-## 🌟 Key Features
+## 🌟 Key Features in v1.1
 
-- **Windows 11-Style Task Manager**: Recreated natively in Swift/AppKit with negligible overhead (< 1.5% CPU load).
-- **Near Real-Time Desktop Widgets**: High-frequency (0.5s–1s) floating HUD ribbon and pop-out monitors for CPU, RAM, Disk, and Network.
-- **Darwin/Mach Telemetry**: Native kernel counters, per-core CPU, APFS disk throughput, network bandwidth, and Apple Silicon GPU utilization.
-- **macOS Menu Bar Extra**: Live system stats directly in your menu bar.
-- **Dynamic Theming**: Multiple color themes (Dark Mode, Vivid Purple, Hot Pink, Monochrome, Light Mode) with real-time Dock icon switching.
+- **Modular Desktop HUD Widgets**: High-frequency (0.5s–1s) desktop-layer and floating widgets.
+- **Process-Locked Widgets**: Pin widgets to single processes or entire process trees surviving app restarts and PID changes.
+- **Menu Bar Item Designer**: Drag-and-drop token strip for menu bar stats with custom label/value colors and PM monogram.
+- **Disk Access Topology Map**: Interactive 3-column topology flow with single-process file isolation and process hierarchy trees.
+- **Hardware Bus Architecture**: Real-time device tree detecting Thunderbolt, USB4, PCIe, Apple Fabric, and SATA link speeds.
+- **Network Tracing & Topology**: Active socket inspection with Geo-IP, reverse DNS, and process connection maps.
+- **Low Effort Design Suite**: Multiple sleek themes (Dark Mode, Vivid Purple, Hot Pink, Amber Gold, Cyber Cyan, Emerald Green, Monochrome, Light Mode).
+- **Anonymous Runtime Telemetry**: On-device tracking of launches, session duration, and update downloads with full user opt-out and raw JSON export.
 
 ---
 
 ## 📄 License & Terms of Use
 
-Copyright © 2026 Low Effort Development Studios / James Humphrey. All rights reserved.
-
-**Proprietary Freeware License**:
-* **Permitted Use**: You are granted a free, non-exclusive license to download, install, and use PerfMon for personal, educational, and commercial purposes on compatible Apple macOS devices.
-* **Restrictions**:
-  * The software is provided in compiled binary form. The source code is proprietary and closed-source.
-  * You may not decompile, reverse engineer, disassemble, decrypt, modify, or create derivative works of this software.
-  * You may not sell, rent, lease, or sub-license the binary packages.
-  * You may not redistribute altered copies or misrepresent the origin of this software.
-* **Disclaimer**: This software is provided "AS IS", without warranty of any kind, express or implied. In no event shall the authors or copyright holders be liable for any claim, damages, or other liability.
+PerfMon is distributed under the MIT License with anonymous runtime telemetry disclosure. See [LICENSE](LICENSE) and [PRIVACY.md](PRIVACY.md).
 
 ---
 
