@@ -209,7 +209,7 @@ PerfMon was engineered with uncompromising efficiency, ensuring that your system
 
 ### Installation & Launch
 
-1. Download the latest release from the [Releases](https://github.com/Facelesswhite/PerfMon/releases) page.
+1. Download the latest release from the [Releases](https://github.com/LowEffortDigital/PerfMon/releases) page.
 2. Drag **`PerfMon.app`** to your `/Applications` folder.
 3. Launch PerfMon:
    ```bash

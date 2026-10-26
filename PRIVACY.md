@@ -41,4 +41,4 @@ The terms of telemetry collection are codified in Section 1 of the PerfMon [LICE
 ### 5. Contact Us
 
 If you have any questions or feedback regarding this Privacy Policy or telemetry handling, open an issue or pull request at:  
-`https://github.com/Facelesswhite/PerfMon/issues`
+`https://github.com/LowEffortDigital/PerfMon/issues`

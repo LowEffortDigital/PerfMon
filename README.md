@@ -19,7 +19,7 @@ Official binary releases and installer packages for **PerfMon (Task Manager for 
 
 1. Download [**`PerfMon.dmg`**](https://github.com/LowEffortDigital/PerfMon/releases/latest/download/PerfMon.dmg).
 2. Double-click the `.dmg` file to mount it.
-3. Drag **PerfMon** (or **Task Manager**) to your **Applications** folder.
+3. Drag **PerfMon** to your **Applications** folder.
 4. Launch **PerfMon** from Launchpad, Spotlight, or Applications.
 
 > **Note on Gatekeeper**: If macOS prompts that the application cannot be checked on first launch:
@@ -31,7 +31,7 @@ Official binary releases and installer packages for **PerfMon (Task Manager for 
 
 ---
 
-## 🌟 Key Features in v1.1
+## 🌟 Key Features
 
 - **Modular Desktop HUD Widgets**: High-frequency (0.5s–1s) desktop-layer and floating widgets.
 - **Process-Locked Widgets**: Pin widgets to single processes or entire process trees surviving app restarts and PID changes.
