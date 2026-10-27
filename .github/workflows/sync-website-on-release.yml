@@ -1,0 +1,82 @@
+name: Sync Website on Release
+
+on:
+  release:
+    types: [published, edited, released]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release Tag to sync to LowEffort.digital (optional, defaults to latest release)'
+        required: false
+
+jobs:
+  sync-website:
+    name: Update LowEffort.digital Links, Features & Version
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Resolve Release Tag & Metadata
+        id: meta
+        env:
+          GH_TOKEN: ${{ secrets.LOWEFFORT_DEPLOY_TOKEN || secrets.DISTRIBUTION_PAT || secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "${{ github.event_name }}" = "release" ]; then
+            TAG="${{ github.event.release.tag_name }}"
+          elif [ -n "${{ github.event.inputs.tag }}" ]; then
+            TAG="${{ github.event.inputs.tag }}"
+          else
+            TAG=$(gh release view --repo "${{ github.repository }}" --json tagName -q '.tagName' || echo "v1.1")
+          fi
+          case "$TAG" in
+            v*) ;;
+            *) TAG="v${TAG}" ;;
+          esac
+          echo "tag=${TAG}" >> $GITHUB_OUTPUT
+
+      - name: Sync Release to LowEffortDigital/PerfMon & Dispatch Website Update
+        env:
+          DEPLOY_TOKEN: ${{ secrets.LOWEFFORT_DEPLOY_TOKEN || secrets.DISTRIBUTION_PAT }}
+        run: |
+          TAG="${{ steps.meta.outputs.tag }}"
+          export GH_TOKEN="$DEPLOY_TOKEN"
+
+          # Ensure website_release.json reflects the released tag
+          python3 -c '
+          import json, os, sys
+          tag = sys.argv[1]
+          meta = {}
+          if os.path.exists("website_release.json"):
+              with open("website_release.json") as f:
+                  meta = json.load(f)
+          meta["app"] = "perfmon"
+          meta["version"] = tag
+          with open("website_release.json", "w") as f:
+              json.dump(meta, f, indent=2)
+          ' "$TAG"
+
+          # Dispatch tools-updated event to Facelesswhite/LowEffort
+          PAYLOAD=$(python3 -c '
+          import json, os, sys
+          tag = sys.argv[1]
+          with open("website_release.json") as f:
+              meta = json.load(f)
+          body = {
+              "event_type": "tools-updated",
+              "client_payload": {
+                  "app": "perfmon",
+                  "tag": tag,
+                  "version": tag,
+                  "metadata": meta
+              }
+          }
+          print(json.dumps(body))
+          ' "$TAG")
+
+          curl -f -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${DEPLOY_TOKEN}" \
+            https://api.github.com/repos/Facelesswhite/LowEffort/dispatches \
+            -d "$PAYLOAD"
+          echo "✓ Dispatched tools-updated event for PerfMon ${TAG} to Facelesswhite/LowEffort"
