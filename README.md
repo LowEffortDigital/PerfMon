@@ -10,7 +10,8 @@ Official binary releases and installer packages for **PerfMon (Task Manager for 
 
 | Release | Version | macOS Requirement | Architecture | Package |
 |:---|:---|:---|:---|:---|
-| **Latest** | **v1.1** | macOS 14.0+ (Sonoma, Sequoia) | Universal (Apple Silicon & Intel) | [**Download PerfMon.dmg**](https://github.com/LowEffortDigital/PerfMon/releases/latest/download/PerfMon.dmg) |
+| **Latest** | **v1.3** | macOS 14.0+ (Sonoma, Sequoia) | Universal (Apple Silicon & Intel) | [**Download PerfMon.dmg**](https://github.com/LowEffortDigital/PerfMon/releases/latest/download/PerfMon.dmg) |
+| **Previous** | **v1.1** | macOS 14.0+ | Universal | [Download PerfMon v1.1](https://github.com/LowEffortDigital/PerfMon/releases/tag/v1.1) |
 | **Previous** | **v1.0.0** | macOS 14.0+ | Universal | [Download PerfMon v1.0.0](https://github.com/LowEffortDigital/PerfMon/releases/tag/v1.0.0) |
 
 ---
