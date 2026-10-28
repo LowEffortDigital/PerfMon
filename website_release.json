@@ -1,7 +1,7 @@
 {
   "app": "perfmon",
   "name": "PerfMon",
-  "version": "v1.4.1",
+  "version": "v1.4.2",
   "tagline": "Windows 11 Task Manager & Precision Telemetry Suite",
   "short_description": "A high-performance Windows 11 Task Manager for Mac. Features unified sortable, resizable, and reorderable table columns across all views, modular sub-second desktop HUD widgets (per-disk & network breakouts, process-locked hierarchy trees), custom Menu Bar item builder with PM monogram icon, interactive 3-column Disk Access & Network Connection Flow Maps with 1-click process isolation, hardware bus monitoring (USB/TB/PCIe), and Apple Silicon GPU telemetry.",
   "spotlight_description": "Everything you love about the Windows 11 Task Manager, engineered natively for macOS in Swift 6. Version 1.4 brings unified sortable, resizable, and drag-to-reorder table columns across every telemetry view (Processes, Network, Disk, Trace, Startup Apps, and Devices), alongside sub-second desktop HUD widgets, modular custom widget builder (break out specific disks, network adapters, and process trees with restart-safe PID invariance), custom Menu Bar item builder with PM monogram icon & color styling, interactive 3-column Disk Access Topology Map with file I/O isolation, Network Connection Flow Map with reverse DNS & cloud badges, Apple Silicon GPU telemetry, and privacy-first opt-in local telemetry.",
