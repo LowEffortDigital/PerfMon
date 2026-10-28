@@ -5,7 +5,7 @@
   "tagline": "Windows 11 Task Manager & Precision Telemetry Suite",
   "short_description": "A high-performance Windows 11 Task Manager for Mac. Features unified sortable, resizable, and reorderable table columns across all views, modular sub-second desktop HUD widgets (per-disk & network breakouts, process-locked hierarchy trees), custom Menu Bar item builder with PM monogram icon, interactive 3-column Disk Access & Network Connection Flow Maps with 1-click process isolation, hardware bus monitoring (USB/TB/PCIe), and Apple Silicon GPU telemetry.",
   "spotlight_description": "Everything you love about the Windows 11 Task Manager, engineered natively for macOS in Swift 6. Version 1.4 brings unified sortable, resizable, and drag-to-reorder table columns across every telemetry view (Processes, Network, Disk, Trace, Startup Apps, and Devices), alongside sub-second desktop HUD widgets, modular custom widget builder (break out specific disks, network adapters, and process trees with restart-safe PID invariance), custom Menu Bar item builder with PM monogram icon & color styling, interactive 3-column Disk Access Topology Map with file I/O isolation, Network Connection Flow Map with reverse DNS & cloud badges, Apple Silicon GPU telemetry, and privacy-first opt-in local telemetry.",
-  "catalog_description": "A high-performance Windows 11 Task Manager recreation engineered natively in Swift 6 for macOS. Features unified sortable, resizable, and reorderable table columns across all 9 telemetry tables, near real-time modular desktop widgets (0.5s–1s sampling, specific disk & network adapter breakouts, process-locked hierarchy trees), custom Menu Bar item builder with PM monogram icon & color styling, interactive 3-column Disk Access & Network Connection Topology Flow Maps with 1-click process isolation, hardware bus monitoring (USB/Thunderbolt/PCIe), 60-second rolling CoreGraphics/Metal grid waveforms, and privacy-first opt-in on-device telemetry. Zero external dependencies.",
+  "catalog_description": "A high-performance Windows 11 Task Manager recreation engineered natively in Swift 6 for macOS. Features unified sortable, resizable, and reorderable table columns across all 9 telemetry tables, near real-time modular desktop widgets (0.5s\u20131s sampling, specific disk & network adapter breakouts, process-locked hierarchy trees), custom Menu Bar item builder with PM monogram icon & color styling, interactive 3-column Disk Access & Network Connection Topology Flow Maps with 1-click process isolation, hardware bus monitoring (USB/Thunderbolt/PCIe), 60-second rolling CoreGraphics/Metal grid waveforms, and privacy-first opt-in on-device telemetry. Zero external dependencies.",
   "spotlight_chips": [
     "Sortable / Resizable / Reorderable Columns",
     "Modular Custom Widgets",
@@ -17,7 +17,7 @@
     "Cloud Provider Badges",
     "Hardware Bus Monitor (USB/TB/PCIe)",
     "Apple Silicon GPU & Core Grids",
-    "Sub-Second Sampling (0.5s–1s)",
+    "Sub-Second Sampling (0.5s\u20131s)",
     "Privacy-First Opt-In Telemetry"
   ],
   "catalog_chips": [
