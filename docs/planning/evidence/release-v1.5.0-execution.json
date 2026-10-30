@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "version": "1.5.0",
+  "build": "7",
+  "source_sha256": "9048ac6274524a61dd3e1b78c0ae0b96f31b3ca25f55906a05a081e2248888aa",
+  "base_revision": "b5c041e3aa2de2bdba2a02d2e6ad5a29e9af2b19",
+  "runtime": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "medium",
+    "model_provider": "openai",
+    "cli_version": "0.166.0-alpha.5.1",
+    "verified_by": "installed metadata-only runtime_provenance.py"
+  },
+  "tests": {
+    "command": "swift test",
+    "executed": 63,
+    "passed": 62,
+    "skipped": 1,
+    "failed": 0,
+    "exclusions": [],
+    "log_sha256": "6d519784c1d68baa3b03ca750186e803355b73d7bd5a55ca1dbd4cc3724872fe"
+  },
+  "review": {
+    "report": "independent-release-review.md",
+    "sha256": "393c6b96f46dec75ea2d6c5b352ace59842f88441346a8f1c63ff90aed573034",
+    "outcome": "no material integration blocker"
+  },
+  "local_bundle": {
+    "build_command": "./Scripts/build_app.sh",
+    "result": "passed",
+    "package_command": "./Scripts/package_dmg.sh",
+    "package_result": "passed",
+    "signature_verification": "passed ad-hoc",
+    "dmg_sha256": "79327a2872e819f0b3b4d360b05fb05a735359681af1d5f2163aa2d8eb6b146c",
+    "source_sha256": "9048ac6274524a61dd3e1b78c0ae0b96f31b3ca25f55906a05a081e2248888aa",
+    "note": "Post-compatibility-fix bundle rebuilt/repackaged and signature verified"
+  },
+  "native_smoke": "integrated gallery and live Network Dual Area/adaptive200Mbps visible; current launcher toggles QA custom card; no installed app launch",
+  "production_preferences_sha256": "8daacf0a5196817cb2bd7a2d372c2da1ea91a9212ebd2bf03f122fad79174533",
+  "production_preferences_unchanged": true,
+  "workload": {
+    "passed": true,
+    "command": "PERFMON_RUN_WIDGET_BENCHMARK=1 swift test --filter WidgetWorkloadTests",
+    "results": "release-v1.5.0-workload.json",
+    "results_sha256": "c6184a345794d9407040edaf4b83d0b0c9dddb7fd7e347e50c095fe78936adaf",
+    "seconds": 185.874,
+    "source_sha256": "0ca1cfba91c66d3a12a25804e25f5f40a2caea34637e5e9f7b149f74bb6f1136",
+    "note": "Measured before the equivalent Double-literal compatibility edit; not remeasured after"
+  },
+  "publication": {
+    "pr": "https://github.com/Facelesswhite/PerfMon/pull/10",
+    "head": "53b00a849fcc7408f87ec50c645428d0d51a9856",
+    "ci_run_id": 40999550139,
+    "merge": "authorized next after CLEAN PR check",
+    "tag": "pending",
+    "prior_ci_failure": {
+      "run_id": 40999282613,
+      "cause": "Swift5.10 Int-to-Double chained literal inference",
+      "correction": "explicit floating-point first literal, same gauge ceiling"
+    },
+    "ci_outcome": "success"
+  }
+}

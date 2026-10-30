@@ -1,0 +1,9 @@
+{
+  "baseline": "a6c637637a8934f1d63682e5cd7c712211930b85",
+  "byte_identical_builtin_views": [
+    "Sources/MacTaskManager/Views/Widgets/CPUWidgetView.swift",
+    "Sources/MacTaskManager/Views/Widgets/MemoryWidgetView.swift",
+    "Sources/MacTaskManager/Views/Widgets/DiskWidgetView.swift"
+  ],
+  "note": "Source-level preservation only; this is not a Classic screenshot comparison."
+}

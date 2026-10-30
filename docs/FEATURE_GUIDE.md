@@ -233,3 +233,14 @@ DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer swift test
 ---
 
 *PerfMon for macOS — Precision Telemetry. Zero Overhead.*
+
+
+## Optional desktop Cards
+
+Use Custom Desktop Widgets → Widget Gallery to add CPU History, Memory Ring, Disk Capacity, Disk Activity, Network Activity or GPU History. Existing widgets default to Classic. Gallery thumbnails contain labelled sample data; desktop Cards use live telemetry.
+
+New styles are History Bars, Stacked History Bars, Ring Gauge and Dual Area. Unsupported new combinations are disabled. Rings represent bounded percentages/capacity, not network utilization. Histories retain 60 samples; elapsed time depends on refresh cadence.
+
+Network graph scaling offers Legacy, Adaptive Visible and Fixed. Legacy remains the app default; new Network Activity presets use Adaptive Visible. Adaptive uses plotted peaks and a shared direction scale; stacked bars use aligned sums. Fixed ceilings use Mbps. Scaling does not change warning thresholds.
+
+[Verification commands and evidence limits](runbooks/widget-rendering-verification.md).

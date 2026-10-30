@@ -1,0 +1,50 @@
+{
+  "version": "1.5.1",
+  "build": "8",
+  "source_sha256": "68c2b7da5721211ed75511af1406d57fd11bb410c5d82bf9663965f2045a5a13",
+  "base_revision": "82166e1c743451721a5a05665d55db4ee797c237",
+  "implementation_runtime": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "medium",
+    "provider": "openai",
+    "cli_version": "0.166.0-alpha.5.1",
+    "verified_by": "installed metadata-only runtime_provenance.py"
+  },
+  "review": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "medium",
+    "report": "independent-v1.5.1-review.md",
+    "report_sha256": "f688c92a30123055595f98403c87faf212776a1a20db310e49881d4fc9e66cfd",
+    "result": "no blocking delta findings"
+  },
+  "tests": {
+    "command": "swift test",
+    "executed": 68,
+    "passed": 67,
+    "skipped": 1,
+    "failed": 0,
+    "exclusions": [],
+    "log_sha256": "758c2e286256e3ab8c90a1e0ef9199c7c23dc5f72f5071a85a66969e2ee30a54"
+  },
+  "local_bundle": {
+    "build": "passed ./Scripts/build_app.sh",
+    "package": "passed ./Scripts/package_dmg.sh",
+    "signature": "passed ad-hoc strict verification",
+    "dmg_sha256": "bb1bc690e8ed18ebe46f324375aa0245d4be5d12e1cf3459365f89ecc67b8c29"
+  },
+  "native_qa": [
+    "Automatic network metric exposes per-widget adaptive override and live Dual Area renders",
+    "CPU-to-Disk gallery choice selects valid disk and enables Add",
+    "QA Network metric restored; gallery left open"
+  ],
+  "installed_preferences_unchanged": true,
+  "installed_preferences_sha256": "8daacf0a5196817cb2bd7a2d372c2da1ea91a9212ebd2bf03f122fad79174533",
+  "workload": "running on current artifact",
+  "prior_release": {
+    "tag": "v1.5.0",
+    "commit": "82166e1c743451721a5a05665d55db4ee797c237",
+    "workflow_id": 40999883327,
+    "outcome": "cancelled before packaging/publication/distribution/website steps; latest remains v1.4.2 in both repos"
+  },
+  "publication": "pending followup PR/CI/merge/new immutable tag"
+}

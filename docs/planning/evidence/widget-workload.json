@@ -1,0 +1,26 @@
+[
+  {
+    "cadence_seconds" : 1,
+    "cpu_percent" : 8.6481390604081696,
+    "resident_after_bytes" : 92061696,
+    "resident_before_bytes" : 89833472,
+    "scenario" : "classic",
+    "seconds" : 60.000041208346374
+  },
+  {
+    "cadence_seconds" : 1,
+    "cpu_percent" : 9.009255255312361,
+    "resident_after_bytes" : 103186432,
+    "resident_before_bytes" : 103055360,
+    "scenario" : "six_cards",
+    "seconds" : 60.00394979165867
+  },
+  {
+    "cadence_seconds" : 1,
+    "cpu_percent" : 9.16059489831372,
+    "resident_after_bytes" : 105824256,
+    "resident_before_bytes" : 105988096,
+    "scenario" : "dashboard",
+    "seconds" : 60.03161433339119
+  }
+]

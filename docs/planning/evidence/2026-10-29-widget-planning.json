@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "evidence_date": "2026-10-29",
+  "timezone": "America/New_York",
+  "stage": "planning",
+  "source_revision": "a6c637637a8934f1d63682e5cd7c712211930b85",
+  "runtime": {
+    "available": true,
+    "model": "gpt-6-astra",
+    "reasoning_effort": "xhigh",
+    "cli_version": "0.166.0-alpha.5.1",
+    "model_provider": "openai"
+  },
+  "source_sha256": {
+    "Package.swift": "46450ee2e61d6e75bb86c76e190b7daeb7002a43cbf5e4523209c6eecb50b2af",
+    "Sources/MacTaskManager/Models/CustomWidgetModels.swift": "43c8f68152edf045ab08df622296e0c9fdce08700818f280a6b079c9ed11c934",
+    "Sources/MacTaskManager/Models/WidgetPreferences.swift": "346fda5212d8a33f7c74ece99777985152d41878888c5ba193ccd986e6c4898a",
+    "Sources/MacTaskManager/Views/Widgets/CustomModularWidgetView.swift": "bd44f3e82914943b42b71c05799234a24a89d9430cc80b13a608cdde7b310a4d",
+    "Sources/MacTaskManager/Engine/SystemMonitorEngine.swift": "e49d8be497aa2a1f291c9499baf0c8dc82e53491343b966633a3cb6dbc607131",
+    "Sources/MacTaskManager/Engine/NetworkMonitor.swift": "50b1af632454cc3adb7021ce050b11eb37b5ff0a241cb9b8cf80109bbe601a6e",
+    "Sources/MacTaskManager/Views/Components/TaskManagerGridChart.swift": "5d9d784424cdbf4bbb4d38cc30f87effd0ad153e59f6c43794fc5672fafd600d",
+    ".github/workflows/ci.yml": "f85ad6c34a146d40b6277415b328667cbf9e4618fc57abe5cbea27ed9f8efedb"
+  },
+  "document_sha256": {
+    "AGENTS.md": "bca6bbaef844372b4df5053287e31775ab847a53acb0cb14bd2119a6b035073c",
+    "docs/planning/DECISIONS.md": "9bafcea644629adf3206da28ecc1e02b7694adaf3e3b4ab91caf9f60b12a6a89",
+    "docs/planning/CHECKPOINT.md": "77e6ea19e972d982e781e6c2469ebe483cdac05d4c9804b7446dbb6366459e6a",
+    "docs/superpowers/specs/2026-10-29-additive-widgets-design.md": "dfe8eeebc2e73ace440c7490309ddebf8e39293e16e931fda80722f0bb9aacce",
+    "docs/superpowers/plans/2026-10-29-additive-widgets.md": "f1a2ca4b1bfd62a7f0f31e331c29271bb5d82fbc9efffede164cd9f23e2a21f2"
+  },
+  "concept_sha256": "b32793fedb7fde1926149ace5b1834ec2ecf9d61158f1b93223858a498f58aac",
+  "validation": {
+    "tracked_source_changes": "none",
+    "document_links": "passed",
+    "concept_browser_review": "observed at 736px and 320px; adaptive burst, expiry, upload-only, idle, fixed overflow",
+    "native_build_tests": "not_run",
+    "native_runtime_qa": "not_run",
+    "independent_implementation_review": "pending",
+    "publication": "none"
+  }
+}

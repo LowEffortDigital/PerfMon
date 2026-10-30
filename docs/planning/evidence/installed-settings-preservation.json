@@ -1,0 +1,7 @@
+{
+  "domain": "com.loweffort.perfmon",
+  "hash_method": "sha256 canonical sorted binary plist",
+  "before_sha256": "8daacf0a5196817cb2bd7a2d372c2da1ea91a9212ebd2bf03f122fad79174533",
+  "after_sha256": "8daacf0a5196817cb2bd7a2d372c2da1ea91a9212ebd2bf03f122fad79174533",
+  "unchanged": true
+}

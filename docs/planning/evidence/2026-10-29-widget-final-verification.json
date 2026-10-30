@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-29",
+  "runtime": {
+    "available": true,
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "medium",
+    "cli_version": "0.166.0-alpha.5.1",
+    "model_provider": "openai"
+  },
+  "base_revision": "a6c637637a8934f1d63682e5cd7c712211930b85",
+  "source_sha256": "1859f45631527866775f9ac0f102c0e2b9ed5b26981b2964cf6171bf4855d8db",
+  "review_report": "independent-widget-review.md",
+  "review_report_sha256": "15482b9c538ccaaa7f3c21ad3ee91ddaef97daf0b2cbd67a4aa18c0fafe0a6ff",
+  "review_outcome": "independent Sol medium review: no remaining material findings",
+  "local_tests": {
+    "executed": 59,
+    "passed": 58,
+    "skipped": 1,
+    "failed": 0,
+    "command": "swift test --skip MacTaskManagerTests.testLiveAutoUpdateCheckAgainstDistributionRepo",
+    "excluded": "pre-existing live updater version whitelist failure, reproduced on untouched baseline",
+    "log_sha256": "4fd697f823ebc6605bfd6b2f5a2e659d16eb4af08e52e2ef77d4a3817d66eff9"
+  },
+  "workload_test": {
+    "passed": true,
+    "command": "PERFMON_RUN_WIDGET_BENCHMARK=1 swift test --filter WidgetWorkloadTests",
+    "results": "widget-workload.json",
+    "source_sha256": "1859f45631527866775f9ac0f102c0e2b9ed5b26981b2964cf6171bf4855d8db",
+    "results_sha256": "a090a67554fd90626e02d1e92f1a595f435231e3553ff04670d25412636c5d6d",
+    "seconds": 186.009,
+    "interpretation": "Classic 8.65%, six Cards 9.01%, dashboard 9.16% test-process CPU. Differences within 2 percentage-point gate. RSS deltas +2.13MiB, +128KiB, -160KiB respectively; bounded intervals are not a long-run leak claim."
+  },
+  "native_qa": {
+    "automated": "show/hide, header hit regions, click-through properties, floating/normal levels, restoration, simulated screen coordinates passed",
+    "manual": "all eight styles, gallery select/cancel/add, close/show, restart persistence, fixed/adaptive scaling and Classic smoke observed in separate QA app; physical drag user-confirmed",
+    "receipt": "widget-desktop-qa.md",
+    "limitations": [
+      "physical multiple displays not run: one active display",
+      "manual click-through/layer interaction not verified",
+      "exhaustive Classic golden before/after screenshot matrix not run",
+      "synthetic dragging unsuccessful"
+    ],
+    "capture_recovery": "foreground QA window; off-display hidden preview geometry diagnosed; no privacy settings changed"
+  },
+  "release_build": "passed",
+  "publication": "none",
+  "preservation": {
+    "settings": "installed-settings-preservation.json",
+    "production_preferences_unchanged": true,
+    "cpu_memory_disk_builtin_sources_match_baseline": true
+  },
+  "release_build_log_sha256": "418b3ebf007c79dd8ed1f47d32cbfa8b75ee7265a773bb9a711c1779a352b0bf",
+  "artifact_state": "local uncommitted; no installed app replacement or publication"
+}
