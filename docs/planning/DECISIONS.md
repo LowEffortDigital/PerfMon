@@ -69,6 +69,20 @@ Native GUI inspection was attempted using a separate QA bundle, `.build/WidgetQA
 
 - CI run40999282613 failed compilation on Xcode15.4/Swift5.10: process Disk I/O gauge ceiling inferred Int from chained integer arithmetic. Local Swift6 accepted it. Explicit 100.0 floating-point constant preserves the numeric value and makes the code compile with the supported CI toolchain; renew artifact review/CI before merge.
 
-- Observed post-merge automated feedback required a followup before publication. v1.5.0 workflow cancelled before publish; tag kept immutable. Use1.5.1/build8 with a new reviewed PR.
+- Observed post-merge automated feedback required a followup before publication. v1.5.0 workflow cancelled before publish; tag kept immutable. Use 1.5.1/build 8 with a new reviewed PR.
 - Derived fixes: shared bundle-aware process history/item identity with nil-bundle key compatibility; guarded backing storage and disabled mutation UI for unreadable archives; effective network-scope scale controls; clicked-metric gallery target resolution retaining valid reselect target. Existing process matching semantics unchanged.
 - Observed test-discovered reentry in first observer rollback fix; replaced by computed guarded setter/private Published storage. Astra/medium independent review escalated after Sol failure per routing instructions.
+
+- Observed final publication: v1.5.1 source/distribution downloads match digests and inspected bundle; all source/release/website workflows succeeded and live website version checked. No installed app update/settings changes.
+- Observed limit: copying published executable into QA wrapper succeeded, but Mac locked before native capture; candidateQA and downloaded-bundle verification remain distinct. Publication is complete; optional exact-binary UI smoke remains pending unlock.
+- Durable release receipts archive on the followup branch after merge; product main/tag remain at reviewed release. Existing redundant website release triggers all succeeded, with no workflow/configuration changes in this task.
+
+## Followup enhancements and crash mitigation — 2026-11-03
+
+- Observed: Menu bar renderer crash on background/sleep-wake due to nil CoreText dictionary copy of dynamic catalog colors (`NSColor.windowBackgroundColor`). Resolved by pre-rendering icons to 2x Retina `NSBitmapImageRep` with thread-safe caching and true knockout alpha blending.
+- Agreed: Add drag-to-reorder for custom menu bar layout and widget settings. Implemented horizontal drag gestures with live step thresholds and visual feedback in `CustomTokenStripView`, `CustomWidgetSettingsView`, and `WidgetPreferences.moveCustomWidget`.
+- Agreed: Add enable/disable feature and GUI addition modal for startup items. Implemented `StartupManager`, interactive toggle switches in `StartupAppsTabView`, and `AddStartupItemSheet` for selecting apps/scripts and registering macOS Login Items or User LaunchAgents.
+- Observed: Stale SMB/TimeMachine network volume mounts cause macOS VFS calls (`mountedVolumeURLs` / `statfs(path)`) to enter uninterruptible kernel sleep (`U` / `?E`). Replaced blocking volume discovery in `DiskMonitor.swift` with `getfsstat(..., MNT_NOWAIT)` and added a 2-second timeout + background dispatch to `StartupManager.swift` and `SystemMonitorEngine.swift`.
+- Agreed: User authorized PR, merge, and deploy for `v1.5.2` (build `9`).
+- Tested: 70 unit tests passing, release build and packaging succeeded in `dist/PerfMon.app`.
+

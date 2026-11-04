@@ -126,3 +126,53 @@ Automated review comments were read during release verification. Confirmed histo
 Regression tests reproduced collision and lost-edit behavior before corrections. First Sol recovery guard recursively reassigned a Published observer; regression crashed in isolated XCTest domain. Replaced with guarded computed property over private Published storage and direct initializer storage load; original corrupt bytes retained. Removed only exact synthetic crash-leftover test payload from com.apple.dt.xctest.tool, after asserting bytes; installed domain untouched. Independent reviewer escalated under routing rule to metadata-verified GPT-6 Astra/medium; Sol remains implementer. Healthy archive publication/persistence regression added; full suite rerunning. Scope is history identity isolation, not changing pre-existing process resolver name-or-bundle matching semantics.
 
 Followup artifact frozen68c2b7da5721211ed75511af1406d57fd11bb410c5d82bf9663965f2045a5a13 (102 versioned files). Independent Astra/medium delta review no blockers. Fullsuite68 executions/67pass/1optional workloadskip/no failures/no exclusions. Build/package/signaturepass. Native QA verifies automatic-network scaleoverridevisibility and live rendering, disk-gallery selectionenablesAdd. Installed preferences canonical hash unchanged. Current workload running; preparing followupPR. Receipt release-v1.5.1-execution.json.
+
+PR11 published https://github.com/Facelesswhite/PerfMon/pull/11, head225babc609bf9f5046c0bf0caa689dcc6bf98049. CI41000974649 unit tests pass/build in progress; automated review41000987094 running. Current-artifact workload passed185.744seconds; results saved release-v1.5.1-workload.json and execution receipt. Publication receipts after this PR commit are currently local pending archival commit, with code frozen and unchanged.
+
+PR11 CI41000974649 completed success:68 executions/1optional skip/zero failures and successful packaged app build on Swift5.10. All102 release manifest paths verified directly against published head225babc609bf9f5046c0bf0caa689dcc6bf98049. Awaiting automated review41000987094 before user-authorized merge/tag; independent Astra review already clear. New v1.5.1 tag name confirmed unused.
+
+Automated review41000987094 completed success; sole comment is documentation spacing, corrected in local archival record. No code findings. CI and independent Astra gates pass for PR11 head225babc609bf9f5046c0bf0caa689dcc6bf98049. Proceeding with authorized exact-head squash merge; source manifest unchanged.
+
+PR11 merged at bdc3fe56923b3b0712afaa57008c4dc7d4974787, merged_at2026-10-30T04:12:15Z. Fetched origin/main matches; all102 manifest files verified directly from this immutable commit before tagging. v1.5.1 remote tag unused. Creating ordinary annotated tag/push only after all assertions passed.
+
+v1.5.1 annotated tag pushed successfully, peeled target bdc3fe56923b3b0712afaa57008c4dc7d4974787. Release workflow41001609045 and mainCI41001581254 started. Await publication/download/website verification; no deployed outcome claimed yet.
+
+## Current final release handoff — 2026-10-30
+
+PR10 and followupPR11 merged. Released v1.5.1/build8 at immutable merged commit bdc3fe56923b3b0712afaa57008c4dc7d4974787. Every102 reviewed product/test/script/metadata files matches this commit; digest68c2b7da5721211ed75511af1406d57fd11bb410c5d82bf9663965f2045a5a13. User-authorized implementation Sol6.1/medium, independent final delta reviewer Astra/medium after Sol recovery-guard failure; no source edits after review.
+
+Publication verified: PRCI41000974649, mainCI41001581254 and release41001609045 all success. Source and LowEffortDigital distribution releases both latestv1.5.1. Distribution docs commit de5468bd96ea3d8aab31cc61832614b184abc96e. Both downloaded DMGs identical SHA2567631f1ee920dbe432faa1f0fdc92c60916ce0bee7aa3e16b72f24880e75b7983, matching GitHub asset digests. Read-only DMG/app inspection passed: version1.5.1/build8, arm64, strict ad-hoc signature and embedded release notes match. Original published production app not installed/launched.
+
+Website runs41001889485/41001897150/41001898249/41001899743 all succeeded; existing release-event wiring produced redundant identical deployments. Synced website commit386d51490525d1b2691891faf09b677dbe1c3186. Live homepage/tools pages HTTP200 showv1.5.1; tools includes gallery/adaptive features and download URL. Public latest-DMG range requestHTTP206. Installed com.loweffort.perfmon settings hash still unchanged.
+
+Tests: full68executions/67pass/1optional workloadskip/zero failures/no exclusions; separate current-artifact185.744second workload passes. Native candidateQA confirms legacy automatic-network override and rendering, disk-gallery Add enabled; earlier eight-style/scale checks and user-confirmed physicaldrag remain attributed. Published executable copied into separateQA wrapper, but final native smoke check stopped because Mac locked; optional unlock question pending. Do not claim that check passed, or physical multi-display/manual click-through/layer/goldenClassic matrix passed. No privacy/production preferences changed.
+
+v1.5.0 tag intentionally retained; workflow40999883327 cancelled before publication. Use releasedv1.5.1, never move either tag. Final execution/download/workload receipts are in evidence/release-v1.5.1-*.json. Current documentation-only receipts and spacing correction archive to origin/codex/widget-release-followup after PR merge; no additional product or website deployment is implied. Verify archival remote head matches the following commit.
+
+## Published executable desktop QA completed after unlock
+
+User confirmed unlocked; metadata probe reverified Sol6.1/medium. Foreground QA capture restored after the usual initial offscreen capture failure. Published v1.5.1 executable in separate re-signed QA wrapper passed gallery display, all eight live graph styles (seven network styles plus Memory Ring), CPU History, show/close, fixed100Mbps and adaptive visible domain changes2Mbps→1Mbps. Restored QA Network Adaptive/Dual Area, hid QA cards and left gallery open. Duplicate launcher/editor AX labels required coordinate targeting; actions and resulting screenshots verified. Saved only sample-gallery screenshot, no process list or target-IP captures.
+
+This supersedes the locked-Mac smoke blocker. Execution/download receipts now mark published-executable desktop checks passed. Installed production preferences canonical SHA256 still8daacf0a5196817cb2bd7a2d372c2da1ea91a9212ebd2bf03f122fad79174533, unchanged. No product/source/installed-app/privacy changes; docs-only result archives to existing followup branch. Prior physical multi-display/manual click-through/layer/exhaustive Classic golden limits remain unchanged. Knowledge-capture check: recovery and coordinate fallback follow existing guidance, no new runbook required.
+
+## Drag-to-reorder and startup items management implementation — 2026-11-03
+
+Branch: `codex/widget-release-followup`.
+
+Completed:
+- Fixed background/sleep-wake CoreText crash in `PMIconRenderer.swift` with 2x Retina pre-rendering, thread-safe caching, and knockout alpha.
+- Added live drag-to-reorder gesture and visual feedback across:
+  - Custom Menu Bar token strip (`CustomTokenStripView.swift`)
+  - Widget header tokens (`CustomTokenStripView.swift`)
+  - Custom desktop widgets list selector (`CustomWidgetSettingsView.swift`, `WidgetPreferences.moveCustomWidget`)
+  - Multi-object scope selected items (`CustomWidgetSettingsView.swift`)
+- Added complete Startup Apps management:
+  - `StartupManager.swift`: Handles fetching, enabling/disabling via AppleScript (with 2s timeout) and launchd/plist mutations, and persistence of disabled user login items.
+  - Interactive Enable/Disable switch in `StartupAppsTabView.swift` (loaded asynchronously on background queue).
+  - `AddStartupItemSheet.swift`: GUI dialog with file picker to add any Application or custom script as a macOS Login Item or User LaunchAgent.
+- Replaced blocking volume enumeration in `DiskMonitor.swift` with `getfsstat(..., MNT_NOWAIT)` and dispatched initial sampling asynchronously in `SystemMonitorEngine.swift` so unresponsive SMB/TimeMachine network mounts cannot hang the process in kernel `U`/`?E` state.
+- Verification:
+  - 70 unit tests executed and passed (0 failures).
+  - Release app (`v1.5.2`, build `9`) successfully built and packaged into `dist/PerfMon.app`.
+  - User authorized PR creation, merge, and deployment for `v1.5.2`.
+

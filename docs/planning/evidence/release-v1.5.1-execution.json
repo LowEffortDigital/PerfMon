@@ -39,12 +39,91 @@
   ],
   "installed_preferences_unchanged": true,
   "installed_preferences_sha256": "8daacf0a5196817cb2bd7a2d372c2da1ea91a9212ebd2bf03f122fad79174533",
-  "workload": "running on current artifact",
+  "workload": {
+    "passed": true,
+    "source_sha256": "68c2b7da5721211ed75511af1406d57fd11bb410c5d82bf9663965f2045a5a13",
+    "seconds": 185.744,
+    "command": "PERFMON_RUN_WIDGET_BENCHMARK=1 swift test --filter WidgetWorkloadTests",
+    "results": "release-v1.5.1-workload.json",
+    "results_sha256": "376b8262476242779f187de2debd6000f7f5be8ccf44caf2000c3b510d0d512f"
+  },
   "prior_release": {
     "tag": "v1.5.0",
     "commit": "82166e1c743451721a5a05665d55db4ee797c237",
     "workflow_id": 40999883327,
     "outcome": "cancelled before packaging/publication/distribution/website steps; latest remains v1.4.2 in both repos"
   },
-  "publication": "pending followup PR/CI/merge/new immutable tag"
+  "publication": {
+    "pr": "https://github.com/Facelesswhite/PerfMon/pull/11",
+    "head": "225babc609bf9f5046c0bf0caa689dcc6bf98049",
+    "ci_run": 41000974649,
+    "automated_review_run": 41000987094,
+    "merge": "verified MERGED",
+    "tag": "v1.5.1 at verified merged artifact",
+    "ci_outcome": "success",
+    "ci_test_executions": 68,
+    "ci_test_skips": 1,
+    "ci_failures": 0,
+    "ci_bundle": "passed",
+    "automated_review": "completed success; only spacing nit",
+    "merge_sha": "bdc3fe56923b3b0712afaa57008c4dc7d4974787",
+    "merged_at": "2026-10-30T04:12:15Z",
+    "tag_target": "bdc3fe56923b3b0712afaa57008c4dc7d4974787",
+    "release_run": 41001609045,
+    "main_ci_run": 41001581254,
+    "release_status": "success",
+    "main_ci_status": "success",
+    "source_release": "https://github.com/Facelesswhite/PerfMon/releases/tag/v1.5.1",
+    "distribution_release": "https://github.com/LowEffortDigital/PerfMon/releases/tag/v1.5.1",
+    "distribution_docs_commit": "de5468bd96ea3d8aab31cc61832614b184abc96e",
+    "website": {
+      "workflow_runs": [
+        41001889485,
+        41001897150,
+        41001898249,
+        41001899743
+      ],
+      "all_completed_success": true,
+      "synced_repo_commit": "386d51490525d1b2691891faf09b677dbe1c3186",
+      "live_checks": {
+        "https://loweffort.digital/": "HTTP200; version1.5.1",
+        "https://loweffort.digital/tools.html": "HTTP200; version1.5.1, visualgallery/adaptivefeatures/downloadlink present"
+      },
+      "public_download_range_get_status": 206
+    }
+  },
+  "installed_preferences_sha256_after_publication": "8daacf0a5196817cb2bd7a2d372c2da1ea91a9212ebd2bf03f122fad79174533",
+  "download_verification": {
+    "file": "release-v1.5.1-download-verification.json",
+    "sha256": "8e90b6bc649a2e97c124b2af528a96b3dd88414b9f393347d9216bb611fff0e1",
+    "source_and_distribution_assets_identical": true,
+    "asset_sha256": "7631f1ee920dbe432faa1f0fdc92c60916ce0bee7aa3e16b72f24880e75b7983",
+    "bundle": "1.5.1/build8 arm64, strict signature/DMG/embeddednotes verified read-only"
+  },
+  "final_published_executable_ui_smoke": {
+    "result": "passed after user unlock",
+    "gallery": "six selectable sample previews render",
+    "live_styles": [
+      "Grid Chart",
+      "Sparkline",
+      "Bar Gauges",
+      "Numeric Only",
+      "History Bars",
+      "Stacked History Bars",
+      "Dual Area",
+      "Ring Gauge"
+    ],
+    "sources": "seven network styles plus live Memory Ring; CPU History also checked",
+    "scaling": "fixed100Mbps shown; Adaptive visible domain changed2Mbps to1Mbps with live traffic",
+    "lifecycle": "QA launcher show and card close verified for CPU, Memory, Network",
+    "restoration": "QA Network restored Adaptive/Dual Area; cards hidden; gallery open",
+    "installed_settings_unchanged": true,
+    "production_preferences_sha256": "8daacf0a5196817cb2bd7a2d372c2da1ea91a9212ebd2bf03f122fad79174533",
+    "limitations": "physical multi-display, manual click-through/layer interaction and exhaustive Classic golden comparison remain outside this check; earlier user physical-drag confirmation retained"
+  },
+  "receipt_archival_destination": "origin/codex/widget-release-followup; documentation-only archival commit after merged225babc PR head; product/source/tag remain unchanged",
+  "published_gallery_screenshot": {
+    "file": "release-v1.5.1-published-gallery.png",
+    "sha256": "68639c3732c430247af3ff9fc2f1980ae3bf955a5ee373897174751c82148461"
+  }
 }
