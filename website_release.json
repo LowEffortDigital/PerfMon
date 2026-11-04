@@ -1,10 +1,10 @@
 {
   "app": "perfmon",
   "name": "PerfMon",
-  "version": "v1.5.1",
+  "version": "v1.5.2",
   "tagline": "Windows 11 Task Manager & Precision Telemetry Suite",
-  "short_description": "A native macOS system monitor with selectable desktop widget previews, eight graph styles, optional adaptive network scaling, process monitoring, disk and network topology, and a custom menu bar builder.",
-  "spotlight_description": "PerfMon 1.5.1 adds a visual gallery with six optional widget presets, Cards presentation, eight graph styles, and adaptive or fixed network graph scaling. Existing widgets retain Classic and Legacy defaults. Monitor CPU, memory, disks, networks and available GPU telemetry with per-device and process scopes.",
+  "short_description": "A native macOS system monitor with selectable desktop widget previews, eight graph styles, optional adaptive network scaling, process monitoring, disk and network topology, startup item management, and a custom menu bar builder.",
+  "spotlight_description": "PerfMon 1.5.2 adds drag-to-reorder across custom menu bar tokens and desktop widget settings, startup item enable/disable switches with a GUI dialog to add Login Items or LaunchAgents, non-blocking volume discovery, and a background menu bar icon crash fix.",
   "catalog_description": "A native macOS system monitor with selectable desktop widget previews, eight graph styles, optional adaptive network scaling, process monitoring, disk and network topology, and a custom menu bar builder.",
   "spotlight_chips": [
     "Visual Widget Gallery",
