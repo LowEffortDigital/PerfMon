@@ -93,4 +93,13 @@ Native GUI inspection was attempted using a separate QA bundle, `.build/WidgetQA
 - Agreed: Closing the main window (red `X` or `⌘W`) hides the main window and removes the app icon from the Dock (`NSApp.setActivationPolicy(.accessory)` by default via `hideDockIconWhenClosed = true`) while keeping the Menu Bar item and Desktop Widgets active. Reopening via the Menu Bar, double-clicking or right-clicking any widget, or opening the app again restores the currently running process's main window and Dock icon.
 - Tested: 71 unit tests executed (70 passed, 1 optional workload skipped, 0 failures), including `testMainWindowCloseDockPolicyAndReopenFromMenuWidgetAndApp`.
 - Agreed: User authorized PR, merge, and deploy for `v1.5.3` (build `10`).
+- Published: PR #13 merged (`8eea799`), `v1.5.3` released on `Facelesswhite/PerfMon` and `LowEffortDigital/PerfMon`, website synced.
+
+## USB & Thunderbolt electrical current draw telemetry — 2026-11-04
+
+- Observed: On modern macOS / Apple Silicon (`IOUSBHostFamily`), `IOUSBHostDevice` exposes allocated current via `"UsbPowerSinkAllocation"` and capability via `"UsbPowerSinkCapability"`, while port-level allocations and wake/sleep limits (`"kUSBBusCurrentAllocation"`, `"kUSBWakePortCurrentLimit"`, `"kUSBSleepPortCurrentLimit"`, `"usb-port-current-limit"`) reside on the parent `AppleUSBHostPort` in the `IOService` plane. Additionally, `scanThunderboltDevices()` treated external `IOThunderboltSwitch` devices (`Depth > 0` / `Route String > 0`) as internal root bridges without power/current telemetry or tunneled PCIe disk correlation.
+- Agreed: Extract USB current and port limits from both `IOUSBHostDevice` and its parent `AppleUSBHostPort`, extract external Thunderbolt / USB4 switch current and `IOPort` Type-C sink status, correlate tunneled PCIe NVMe disks, and display `mA` and `W` in the Devices KPI card, table column, and technical details tray.
+- Tested: 72 unit tests executed (71 passed, 1 optional workload skipped, 0 failures), including `testUSBAndThunderboltCurrentDrawExtraction`.
+- Agreed: User authorized PR, merge, and deploy for `v1.5.4` (build `11`), plus deprecating older `v1.0.0` and `v1.1` releases on the deployment repository.
+
 

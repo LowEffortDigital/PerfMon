@@ -189,4 +189,19 @@ Completed:
 - Verification:
   - 71 unit tests executed (70 passed, 1 optional workload test skipped, 0 failures), including `testMainWindowCloseDockPolicyAndReopenFromMenuWidgetAndApp`.
   - User authorized PR, merge, and deployment for `v1.5.3` (build `10`).
+  - Published: PR #13 merged (`8eea799`), `v1.5.3` released on `Facelesswhite/PerfMon` and `LowEffortDigital/PerfMon`, website deployed.
+
+## USB & Thunderbolt electrical current draw telemetry — 2026-11-04
+
+Branch: `release/v1.5.4` (from `main` `8eea799`).
+
+Completed:
+- Updated `BusMonitor.swift` (`scanUSBDevices` and `extractUSBCurrents`) to read `UsbPowerSinkAllocation`, `UsbPowerSinkCapability`, and parent `AppleUSBHostPort` properties (`kUSBBusCurrentAllocation`, `kUSBWakePortCurrentLimit`, `kUSBSleepPortCurrentLimit`, little-endian `usb-port-current-limit`, `PortNumber`, and `port-statistics`), with standard USB unit-load fallback for active configured external peripherals.
+- Updated `BusMonitor.swift` (`scanThunderboltDevices` and `extractThunderboltCurrents`) to distinguish external connected Thunderbolt / USB4 switches (`Depth > 0` / `Route String > 0`) from internal root switches, walk the `IOPort` plane for Type-C sink power state and port numbers, and correlate tunneled PCIe/NVMe storage subtrees with live disk read/write throughput.
+- Updated `BusDeviceModels.swift` (`totalPowerAllocatedWatts`) and `DevicesSectionView.swift` to display `mA` and `W` in the **USB / TB Power Draw** KPI card, **Live Throughput / Power** column, and expanded device details tray.
+- Verification:
+  - 72 unit tests executed (71 passed, 1 optional workload test skipped, 0 failures), including `testUSBAndThunderboltCurrentDrawExtraction`.
+  - Local release app built (`./Scripts/build_app.sh`), installed to `/Applications/PerfMon.app`, and live-exercised (`2100 mA` / `10.5 W` total across connected USB and Thunderbolt 4 / USB4 devices).
+  - User authorized PR, merge, and deployment for `v1.5.4` (build `11`) and deprecation of `v1.0.0` and `v1.1` releases on the deployment repository.
+
 
