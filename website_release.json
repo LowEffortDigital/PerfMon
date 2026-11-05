@@ -9,6 +9,9 @@
   "spotlight_chips": [
     "Visual Widget Gallery",
     "Eight Graph Styles",
+    "USB & TB Power Draw (mA/W)",
+    "Startup Item Manager",
+    "Dock-Free Background Mode",
     "Optional Adaptive Network Scaling",
     "Sortable / Resizable / Reorderable Columns",
     "Modular Custom Widgets",
@@ -17,15 +20,15 @@
     "Menu Bar Builder (PM Icon)",
     "Disk Access Topology Map",
     "Network Flow Map & Reverse DNS",
-    "Cloud Provider Badges",
-    "Hardware Bus Monitor (USB/TB/PCIe)",
     "Apple Silicon GPU & Core Grids",
-    "Sub-Second Sampling (0.5s\u20131s)",
     "Privacy-First Opt-In Telemetry"
   ],
   "catalog_chips": [
     "Visual widget gallery",
     "Eight graph styles",
+    "USB & TB power draw (mA/W)",
+    "Startup item manager",
+    "Dock-free background mode",
     "Adaptive network scaling",
     "Sortable & reorderable columns",
     "Modular desktop widgets",
@@ -41,7 +44,6 @@
     "Apple Silicon GPU",
     "Core multi-grid",
     "Win11 grid charts",
-    "Process trace recorder",
     "Privacy-first opt-in telemetry"
   ],
   "repo_url": "https://github.com/LowEffortDigital/PerfMon",
