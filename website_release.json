@@ -1,10 +1,10 @@
 {
   "app": "perfmon",
   "name": "PerfMon",
-  "version": "v1.5.2",
+  "version": "v1.5.3",
   "tagline": "Windows 11 Task Manager & Precision Telemetry Suite",
   "short_description": "A native macOS system monitor with selectable desktop widget previews, eight graph styles, optional adaptive network scaling, process monitoring, disk and network topology, startup item management, and a custom menu bar builder.",
-  "spotlight_description": "PerfMon 1.5.2 adds drag-to-reorder across custom menu bar tokens and desktop widget settings, startup item enable/disable switches with a GUI dialog to add Login Items or LaunchAgents, non-blocking volume discovery, and a background menu bar icon crash fix.",
+  "spotlight_description": "PerfMon 1.5.3 adds automatic Dock icon removal when the main window is closed while keeping the Menu Bar item and Desktop Widgets active, and restores the running process window from the Menu Bar, double-clicking or right-clicking any widget, or reopening the app.",
   "catalog_description": "A native macOS system monitor with selectable desktop widget previews, eight graph styles, optional adaptive network scaling, process monitoring, disk and network topology, and a custom menu bar builder.",
   "spotlight_chips": [
     "Visual Widget Gallery",

@@ -174,5 +174,19 @@ Completed:
 - Verification:
   - 70 unit tests executed and passed (0 failures).
   - Release app (`v1.5.2`, build `9`) successfully built and packaged into `dist/PerfMon.app`.
-  - User authorized PR creation, merge, and deployment for `v1.5.2`.
+  - User authorized PR creation, merge, and deployment for `v1.5.2` (merged in PR #12, tagged `v1.5.2`, published to `Facelesswhite/PerfMon` and `LowEffortDigital/PerfMon`, website deployed).
+
+## Main window close/reopen lifecycle and Dock icon management — 2026-11-04
+
+Branch: `release/v1.5.3` (from `main` `5c3d6de`).
+
+Completed:
+- Fixed `AppDelegate.applicationShouldHandleReopen(_:hasVisibleWindows:)` in `MacTaskManagerApp.swift` so it always restores the main window even when `hasVisibleWindows` is `true` due to active `DesktopWidgetWindow` instances, plus added single-instance handoff via `DistributedNotificationCenter` (`com.loweffort.perfmon.showMainWindow`).
+- Implemented `NSWindowDelegate.windowShouldClose(_:)` and `hideMainWindow()` / `syncDockIconActivationPolicy()` in `WindowManager.swift` so pressing the red close button (`X`) or `⌘W` hides `mainWindow` and switches `NSApp` to `.accessory` activation policy (removing the Dock icon while keeping the Menu Bar item and all Desktop Widgets visible and running), and `showMainWindow()` restores `.regular` policy, custom theme Dock icon, and brings `mainWindow` to the active Space.
+- Added `hideDockIconWhenClosed` (default `true`) and `alwaysHideDockIcon` (default `false`) in `WidgetPreferences.swift`, with UI controls in `SettingsTabView.swift` and `MenuBarController.swift`.
+- Upgraded `MenuBarController.swift` to use native `NSMenuDelegate.menuNeedsUpdate(_:)` instead of synthetic `performClick(nil)` inside `leftMouseUp`.
+- Added main-window restoration from any desktop widget in `DesktopWidgetWindow.swift`, `NativeWindowDragHandle.swift`, `AllInOneHUDWidgetView.swift`, and `CustomModularWidgetView.swift` via double-click, right-click context menu ("Open PerfMon Window", "Configure Widgets...", "Close Widget"), and header window icon button.
+- Verification:
+  - 71 unit tests executed (70 passed, 1 optional workload test skipped, 0 failures), including `testMainWindowCloseDockPolicyAndReopenFromMenuWidgetAndApp`.
+  - User authorized PR, merge, and deployment for `v1.5.3` (build `10`).
 

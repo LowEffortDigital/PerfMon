@@ -85,4 +85,12 @@ Native GUI inspection was attempted using a separate QA bundle, `.build/WidgetQA
 - Observed: Stale SMB/TimeMachine network volume mounts cause macOS VFS calls (`mountedVolumeURLs` / `statfs(path)`) to enter uninterruptible kernel sleep (`U` / `?E`). Replaced blocking volume discovery in `DiskMonitor.swift` with `getfsstat(..., MNT_NOWAIT)` and added a 2-second timeout + background dispatch to `StartupManager.swift` and `SystemMonitorEngine.swift`.
 - Agreed: User authorized PR, merge, and deploy for `v1.5.2` (build `9`).
 - Tested: 70 unit tests passing, release build and packaging succeeded in `dist/PerfMon.app`.
+- Published: PR #12 merged (`5c3d6de`), `v1.5.2` released on `Facelesswhite/PerfMon` and `LowEffortDigital/PerfMon`, website synced.
+
+## Main window close/reopen and Dock icon lifecycle — 2026-11-04
+
+- Observed: Closing the main window while any `DesktopWidgetWindow` was active left `hasVisibleWindows == true` (`flag == true` in `applicationShouldHandleReopen`), preventing Dock clicks or reopening the app from restoring `mainWindow`. Additionally, `DesktopWidgetWindow` had `canBecomeMain == true` and `canHide == true`, and `NSApp` remained in `.regular` policy when the main window closed.
+- Agreed: Closing the main window (red `X` or `⌘W`) hides the main window and removes the app icon from the Dock (`NSApp.setActivationPolicy(.accessory)` by default via `hideDockIconWhenClosed = true`) while keeping the Menu Bar item and Desktop Widgets active. Reopening via the Menu Bar, double-clicking or right-clicking any widget, or opening the app again restores the currently running process's main window and Dock icon.
+- Tested: 71 unit tests executed (70 passed, 1 optional workload skipped, 0 failures), including `testMainWindowCloseDockPolicyAndReopenFromMenuWidgetAndApp`.
+- Agreed: User authorized PR, merge, and deploy for `v1.5.3` (build `10`).
 
