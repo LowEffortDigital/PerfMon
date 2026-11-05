@@ -235,12 +235,30 @@ DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer swift test
 *PerfMon for macOS — Precision Telemetry. Zero Overhead.*
 
 
-## Optional desktop Cards
+## Optional desktop Cards (1.5.0–1.5.1)
 
 Use Custom Desktop Widgets → Widget Gallery to add CPU History, Memory Ring, Disk Capacity, Disk Activity, Network Activity or GPU History. Existing widgets default to Classic. Gallery thumbnails contain labelled sample data; desktop Cards use live telemetry.
 
 New styles are History Bars, Stacked History Bars, Ring Gauge and Dual Area. Unsupported new combinations are disabled. Rings represent bounded percentages/capacity, not network utilization. Histories retain 60 samples; elapsed time depends on refresh cadence.
 
 Network graph scaling offers Legacy, Adaptive Visible and Fixed. Legacy remains the app default; new Network Activity presets use Adaptive Visible. Adaptive uses plotted peaks and a shared direction scale; stacked bars use aligned sums. Fixed ceilings use Mbps. Scaling does not change warning thresholds.
+
+![PerfMon visual widget gallery and rounded Cards](docs/screenshots/06_Widget_Gallery.png)
+
+## Startup Item Manager & Drag-to-Reorder Settings (1.5.2)
+
+- **Login Items & LaunchAgents Management**: Inspect all registered Login Items (`SMAppService`), user LaunchAgents (`~/Library/LaunchAgents`), and system LaunchAgents (`/Library/LaunchAgents`). Toggle items on/off, add custom launch binaries, and view bundle IDs, target paths, and execution triggers.
+- **Drag-to-Reorder Token Strip & Widgets**: Reorder custom token strip entries and desktop widgets with intuitive drag handles directly in Settings.
+
+## Dock-Free Background Mode & Running Window Restoration (1.5.3)
+
+- **Dock Icon Removal on Close**: Closing the main window (`⌘W` or red `X`) automatically transitions the app to `.accessory` activation policy, hiding the Dock icon while keeping the Menu Bar item and desktop widgets active in the background. Configurable via Settings → General.
+- **Universal Main Window Restoration**: Seamlessly restore the running main window and Dock icon by clicking "Open PerfMon Window" in the Menu Bar extra, double-clicking or right-clicking any desktop widget, or reopening the app from Applications, Spotlight, or Launchpad.
+
+## Real-Time USB & Thunderbolt / USB4 Electrical Power Telemetry (1.5.4)
+
+- **Hardware Current Draw Extraction**: Real-time extraction of allocated current (`mA`) and total power draw (`W`) across connected USB 2.0/3.x, USB4, and Thunderbolt 3/4 devices from Darwin `IOUSBHostFamily`, `AppleUSBHostPort`, and `IOPort` registries.
+- **External PCIe/NVMe Correlation**: Distinguishes external Thunderbolt storage switches from internal root bridges and correlates active disk read/write throughput with power draw.
+- **Devices Tab Power KPI & Live Column**: High-visibility "USB / TB Power Draw" KPI card in the Devices tab displaying total milliamps and watts, with per-device throughput and power draw indicators in the main hardware tree.
 
 [Verification commands and evidence limits](docs/runbooks/widget-rendering-verification.md).
