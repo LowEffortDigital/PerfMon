@@ -1,10 +1,10 @@
 {
   "app": "perfmon",
   "name": "PerfMon",
-  "version": "v1.5.5",
+  "version": "v2.0.0",
   "tagline": "Windows 11 Task Manager & Precision Telemetry Suite",
   "short_description": "A native macOS system monitor with cross-app Low Effort Suite theme and persistent Dock icon sync, per-process and socket network download/upload speeds, selectable desktop widget previews, eight graph styles, USB/TB power telemetry, and a custom menu bar builder.",
-  "spotlight_description": "PerfMon 1.5.5 adds Low Effort Suite cross-app theme, accent, and persistent Dock icon synchronization across PerfMon, EventViewer, and VolMan, plus per-process and per-socket download/upload speeds and cumulative network bytes across the Process and Network grids.",
+  "spotlight_description": "PerfMon 2.0 unifies the Low Effort Suite with cross-app theme, accent, and persistent Dock icon synchronization across PerfMon, EventMon, VolMon, and WebMon, plus native desktop widget level and magnetic snap-to-grid, per-process and per-socket download/upload speeds, and cumulative network bytes across the Process and Network grids.",
   "catalog_description": "A native macOS system monitor with cross-app Low Effort Suite theme and persistent Dock icon sync, per-process and socket network download/upload speeds, selectable desktop widget previews, eight graph styles, and a custom menu bar builder.",
   "spotlight_chips": [
     "Low Effort Suite Theme & Icon Sync",

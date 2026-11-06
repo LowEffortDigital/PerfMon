@@ -261,4 +261,10 @@ Network graph scaling offers Legacy, Adaptive Visible and Fixed. Legacy remains 
 - **External PCIe/NVMe Correlation**: Distinguishes external Thunderbolt storage switches from internal root bridges and correlates active disk read/write throughput with power draw.
 - **Devices Tab Power KPI & Live Column**: High-visibility "USB / TB Power Draw" KPI card in the Devices tab displaying total milliamps and watts, with per-device throughput and power draw indicators in the main hardware tree.
 
+## Unified Low Effort Suite v2.0 Standardization (2.0.0)
+
+- **4-App Suite Theme & Persistent Dock Icon Sync**: Synchronize themes, custom accent hex colors, monogram role (`PM`/`EM`/`VM`/`WM` default, `PE`/`EE`/`VO`/`WE` edition, or `LE` studio), and widget HUD opacity/blur across `PerfMon`, `EventMon`, `VolMon`, and `WebMon`.
+- **Native Desktop Widget Level & Magnetic Snap-to-Grid**: Pin widgets at `.desktopIconWindow + 1` above wallpaper and beneath normal apps, with magnetic 16pt snap-to-grid and 18pt screen margins across Notification Center and sibling suite widgets.
+- **Per-Process & Socket Network Download/Upload Speeds**: Live `nettop` delta sampling for per-process and per-socket download/upload throughput and cumulative network bytes.
+
 [Verification commands and evidence limits](docs/runbooks/widget-rendering-verification.md).
