@@ -1,12 +1,14 @@
 {
   "app": "perfmon",
   "name": "PerfMon",
-  "version": "v1.5.4",
+  "version": "v1.5.5",
   "tagline": "Windows 11 Task Manager & Precision Telemetry Suite",
-  "short_description": "A native macOS system monitor with selectable desktop widget previews, eight graph styles, optional adaptive network scaling, process monitoring, disk and network topology, startup item management, and a custom menu bar builder.",
-  "spotlight_description": "PerfMon 1.5.4 adds accurate USB and Thunderbolt / USB4 electrical current and wattage telemetry across modern Apple Silicon IOUSBHostFamily, AppleUSBHostPort, and IOPort registries, plus external Thunderbolt PCIe storage correlation.",
-  "catalog_description": "A native macOS system monitor with selectable desktop widget previews, eight graph styles, optional adaptive network scaling, process monitoring, disk and network topology, and a custom menu bar builder.",
+  "short_description": "A native macOS system monitor with cross-app Low Effort Suite theme and persistent Dock icon sync, per-process and socket network download/upload speeds, selectable desktop widget previews, eight graph styles, USB/TB power telemetry, and a custom menu bar builder.",
+  "spotlight_description": "PerfMon 1.5.5 adds Low Effort Suite cross-app theme, accent, and persistent Dock icon synchronization across PerfMon, EventViewer, and VolMan, plus per-process and per-socket download/upload speeds and cumulative network bytes across the Process and Network grids.",
+  "catalog_description": "A native macOS system monitor with cross-app Low Effort Suite theme and persistent Dock icon sync, per-process and socket network download/upload speeds, selectable desktop widget previews, eight graph styles, and a custom menu bar builder.",
   "spotlight_chips": [
+    "Low Effort Suite Theme & Icon Sync",
+    "Per-Process & Socket Net Speeds",
     "Visual Widget Gallery",
     "Eight Graph Styles",
     "USB & TB Power Draw (mA/W)",
@@ -24,6 +26,8 @@
     "Privacy-First Opt-In Telemetry"
   ],
   "catalog_chips": [
+    "Cross-app theme & icon sync",
+    "Per-process & socket net speeds",
     "Visual widget gallery",
     "Eight graph styles",
     "USB & TB power draw (mA/W)",
