@@ -102,4 +102,12 @@ Native GUI inspection was attempted using a separate QA bundle, `.build/WidgetQA
 - Tested: 72 unit tests executed (71 passed, 1 optional workload skipped, 0 failures), including `testUSBAndThunderboltCurrentDrawExtraction`.
 - Agreed: User authorized PR, merge, and deploy for `v1.5.4` (build `11`), plus deprecating older `v1.0.0` and `v1.1` releases on the deployment repository.
 
+## Low Effort Suite sync, per-process network bandwidth, and decimal GB disk capacity — 2026-11-05
+
+- Agreed: Synchronize themes, custom accents, and persistent on-disk Dock icons (`AppIcon.icns`) across PerfMon, EventViewer, and VolMan (`~/.loweffort/theme_sync.json`).
+- Agreed: Display per-process and per-socket download/upload speeds (`DOWN / S`, `UP / S`) and cumulative network bytes (`TOTAL IN`, `TOTAL OUT`) across the Network and Process grids.
+- Agreed: Format disk volume capacities (`usedBytes`, `freeBytes`, `totalBytes`) in decimal `GB` (`1000^3`) via `MetricFormatters.formatDiskBytes` so PerfMon matches macOS `diskutil`, `Finder`, and `VolMan`.
+- Agreed: User authorized deployment of `v1.5.5` (build `12`) and `VolMan v1.0` to deployment repositories and website update.
+
+
 

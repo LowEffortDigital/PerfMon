@@ -204,4 +204,16 @@ Completed:
   - Local release app built (`./Scripts/build_app.sh`), installed to `/Applications/PerfMon.app`, and live-exercised (`2100 mA` / `10.5 W` total across connected USB and Thunderbolt 4 / USB4 devices).
   - User authorized PR, merge, and deployment for `v1.5.4` (build `11`) and deprecation of `v1.0.0` and `v1.1` releases on the deployment repository.
 
+## Low Effort Suite sync, per-process network speeds, and decimal GB disk capacity — 2026-11-05
+
+Branch: `main`.
+
+Completed:
+- Added `LowEffortThemeSyncManager.swift` for cross-app theme, custom accent hex, monogram style, and persistent `.app/Contents/Resources/AppIcon.icns` Dock icon synchronization across PerfMon, EventViewer, and VolMan.
+- Added per-process and per-socket network download/upload speeds (`DOWN / S`, `UP / S`) and cumulative bytes (`TOTAL IN`, `TOTAL OUT`) via `nettop -P -L 1` delta sampling across the Processes and Network grids (`SystemActivityInspector.swift`, `NetworkSectionView.swift`, `ProcessRowView.swift`).
+- Added `MetricFormatters.formatDiskBytes` (base-10 decimal `GB`) in `SystemMetrics.swift`, `DiskSectionView.swift`, `DevicesSectionView.swift`, and `DiskWidgetView.swift` so disk volume capacity readouts match macOS `diskutil`, `Finder`, and `VolMan`.
+- Fixed `Scripts/package_dmg.sh` to always rebuild `PerfMon.app` via `Scripts/build_app.sh` before packaging `PerfMon.dmg`.
+- User authorized deployment of `v1.5.5` (build `12`) and `VolMan v1.0` to deployment repositories and website update.
+
+
 
