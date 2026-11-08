@@ -10,25 +10,15 @@ Official binary releases and installer packages for **PerfMon (Task Manager for 
 
 | Release | Version | macOS Requirement | Architecture | Package |
 |:---|:---|:---|:---|:---|
-| **Latest** | **v2.0.0** | macOS 14.0+ (Sonoma, Sequoia) | Universal (Apple Silicon & Intel) | [**Download PerfMon.dmg**](https://github.com/LowEffortDigital/PerfMon/releases/latest/download/PerfMon.dmg) |
-| **Previous** | **v1.5.5** | macOS 14.0+ | Universal | [Download PerfMon v1.5.5](https://github.com/LowEffortDigital/PerfMon/releases/tag/v1.5.5) |
-| **Previous** | **v1.5.4** | macOS 14.0+ | Universal | [Download PerfMon v1.5.4](https://github.com/LowEffortDigital/PerfMon/releases/tag/v1.5.4) |
-| **Previous** | **v1.5.2** | macOS 14.0+ | Universal | [Download PerfMon v1.5.2](https://github.com/LowEffortDigital/PerfMon/releases/tag/v1.5.2) |
-| **Previous** | **v1.5.1** | macOS 14.0+ | Universal | [Download PerfMon v1.5.1](https://github.com/LowEffortDigital/PerfMon/releases/tag/v1.5.1) |
-| **Previous** | **v1.5.0** | macOS 14.0+ | Universal | [Download PerfMon v1.5.0](https://github.com/LowEffortDigital/PerfMon/releases/tag/v1.5.0) |
-| **Previous** | **v1.4.2** | macOS 14.0+ | Universal | [Download PerfMon v1.4.2](https://github.com/LowEffortDigital/PerfMon/releases/tag/v1.4.2) |
-| **Previous** | **v1.4.1** | macOS 14.0+ | Universal | [Download PerfMon v1.4.1](https://github.com/LowEffortDigital/PerfMon/releases/tag/v1.4.1) |
-| **Previous** | **v1.4** | macOS 14.0+ | Universal | [Download PerfMon v1.4](https://github.com/LowEffortDigital/PerfMon/releases/tag/v1.4) |
-| **Previous** | **v1.3** | macOS 14.0+ | Universal | [Download PerfMon v1.3](https://github.com/LowEffortDigital/PerfMon/releases/tag/v1.3) |
-| **Previous** | **v1.1** | macOS 14.0+ | Universal | [Download PerfMon v1.1](https://github.com/LowEffortDigital/PerfMon/releases/tag/v1.1) |
-| **Previous** | **v1.0.0** | macOS 14.0+ | Universal | [Download PerfMon v1.0.0](https://github.com/LowEffortDigital/PerfMon/releases/tag/v1.0.0) |
+| **Latest** | **v2.0.1** | macOS 14.0+ (Sonoma, Sequoia) | Universal (Apple Silicon & Intel) | [**Download PerfMon.dmg**](https://github.com/LowEffortDigital/PerfMon/releases/latest/download/PerfMon.dmg) |
+| **Previous** | **v2.0.0** | macOS 14.0+ | Universal | [Download PerfMon v2.0.0](https://github.com/LowEffortDigital/PerfMon/releases/tag/v2.0.0) |
 
 ---
 
 ## 🚀 Installation Guide
 
-1. Download [**`PerfMon.dmg`**](https://github.com/LowEffortDigital/PerfMon/releases/latest/download/PerfMon.dmg).
-2. Double-click the `.dmg` file to mount it.
+1. Download [****](https://github.com/LowEffortDigital/PerfMon/releases/latest/download/PerfMon.dmg).
+2. Double-click the  file to mount it.
 3. Drag **PerfMon** to your **Applications** folder.
 4. Launch **PerfMon** from Launchpad, Spotlight, or Applications.
 
