@@ -1,11 +1,11 @@
 {
   "app": "perfmon",
   "name": "PerfMon",
-  "version": "v2.0.1",
+  "version": "v2.3.0",
   "tagline": "Windows 11 Task Manager & Precision Telemetry Suite",
-  "short_description": "A native macOS system monitor with cross-app Low Effort Suite theme and persistent Dock icon sync, homogenized tactile LowEffortButtonStyle controls, active-display multi-monitor widget placement, per-process and socket network download/upload speeds, selectable desktop widget previews, eight graph styles, USB/TB power telemetry, and a custom menu bar builder.",
-  "spotlight_description": "PerfMon v2.0.1 unifies the Low Effort Suite with cross-app theme, accent, and persistent Dock icon synchronization across PerfMon, EventMon, VolMon, and WebMon, homogenized tactile LowEffortButtonStyle controls, active-display multi-monitor widget placement with always-on-top floating mode and magnetic snap-to-grid, per-process and per-socket download/upload speeds, and cumulative network bytes across the Process and Network grids.",
-  "catalog_description": "A native macOS system monitor with cross-app Low Effort Suite theme and persistent Dock icon sync, homogenized tactile LowEffortButtonStyle controls, active-display multi-monitor widget placement, per-process and socket network download/upload speeds, selectable desktop widget previews, eight graph styles, and a custom menu bar builder.",
+  "short_description": "A native macOS system monitor with WebMon v2.3-parity custom widget studio (tabbed Main/Header/Footer designer, toggleable Header & Footer chrome with hover move-cross mini-toolbar, static text, environment variables, date/time & last-refresh tokens, 10 font families, custom surface backgrounds, multi-step undo, Copy Widget, and scrollbar-free full-card expansion), cross-app Low Effort Suite theme and Dock icon sync, per-process/socket network speeds, and eight graph styles.",
+  "spotlight_description": "PerfMon v2.3.0 brings full WebMon v2.3 widget customization parity to desktop telemetry cards and modular HUDs: a tabbed Main/Header/Footer component designer, toggleable Header & Footer chrome with edge-to-edge full-card bleed and a hover 4-way move-cross mini-toolbar, static text, environment variables ($USER, $HOST, $HOME, $SHELL), date/time and last-refresh tokens, per-token typography across 10 font families, custom widget surface backgrounds (Solid, Two-Tone Gradient, Procedural Wallpaper), 30-step Undo, Copy Widget with new-name prompt, and scrollbar-free full-card item expansion.",
+  "catalog_description": "A native macOS system monitor with WebMon v2.3-parity custom widget studio (tabbed Main/Header/Footer designer, toggleable Header & Footer chrome, env/date/refresh tokens, 10 font families, custom backgrounds, multi-step undo & Copy Widget), cross-app theme sync, per-process network speeds, eight graph styles, and a custom menu bar builder.",
   "spotlight_chips": [
     "Low Effort Suite Theme & Icon Sync",
     "Tactile LowEffortButtonStyle UI",
